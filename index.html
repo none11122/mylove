@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hearts-bg" id="heartsBg"></div>
+    <audio id="bgMusic" src="file/music.mp3" loop preload="auto"></audio>
+
+    <img src="file/cat1.png" alt="cat" class="cat cat-top-left" onerror="this.style.display='none'">
+    <img src="file/cat2.png" alt="cat" class="cat cat-bottom-right" onerror="this.style.display='none'">
+    <img src="file/cat3.png" alt="cat" class="cat cat-top-right" onerror="this.style.display='none'">
+
+    <div class="container">
+        <!-- Шаг 1 -->
+        <section class="step active" id="step1">
+            <h2 class="question">Сколько месяцев мы уже вместе?</h2>
+            <select id="monthsSelect">
+                <option value="" disabled selected>Выбери цифру</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button class="check-btn" data-step="1">Проверить</button>
+        </section>
+
+        <!-- Шаг 2 -->
+        <section class="step" id="step2">
+            <h2 class="question">Где мы чаще всего проводили время вместе?</h2>
+            <div class="options" id="placeOptions">
+                <button class="option-btn" data-value="Бармыш">Бармыш</button>
+                <button class="option-btn" data-value="Берёзовая роща">Берёзовая роща</button>
+                <button class="option-btn" data-value="У тебя дома">У тебя дома</button>
+                <button class="option-btn" data-value="Дальняя Пятёрочка">Дальняя Пятёрочка</button>
+                <button class="option-btn" data-value="У Ксюши">У Ксюши</button>
+                <button class="option-btn" data-value="У меня">У меня</button>
+            </div>
+            <button class="check-btn" data-step="2" disabled>Проверить</button>
+        </section>
+
+        <!-- Шаг 3 -->
+        <section class="step" id="step3">
+            <h2 class="question">Какой у меня рост?</h2>
+            <div class="input-wrap">
+                <input type="number" id="heightInput" inputmode="numeric" pattern="[0-9]*" placeholder="Число">
+                <span class="unit">см</span>
+            </div>
+            <button class="check-btn" data-step="3">Проверить</button>
+        </section>
+
+        <!-- Шаг 4 -->
+        <section class="step" id="step4">
+            <p class="message-text">
+                Напиши мне здесь всё, что ты хотела бы сказать, высказать, выплеснуть.
+                Можно не только хорошее, но и плохое. Я не осужу, а пойму и сделаю всё,
+                чтобы это больше не повторялось. Можешь хотя бы написать, что «Всё нормально» 💌
+            </p>
+            <textarea id="loveMessage" placeholder="Пиши сюда всё, что на душе..."></textarea>
+            <button class="check-btn" id="sendBtn">Отправить</button>
+            <p id="sendStatus" class="send-status"></p>
+        </section>
+
+        <!-- Шаг 5 -->
+        <section class="step" id="step5">
+            <video id="finalVideo" playsinline preload="auto">
+                <source src="file/video.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </section>
+
+        <!-- Шаг 6 -->
+        <section class="step" id="step6">
+            <h2 class="question">Понравилось?</h2>
+            <div class="answers">
+                <button class="answer-btn" id="yesBtn">ДА!!</button>
+                <button class="answer-btn" id="noBtn">НЕТ</button>
+            </div>
+        </section>
+
+        <!-- Шаг 7 -->
+        <section class="step" id="step7">
+            <h1 class="thanks">Спасибо тебе за всё! 💖</h1>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
